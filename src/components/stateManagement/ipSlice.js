@@ -1,6 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {}
+const initialState = {
+    ip: '',
+    /*
+    data: {
+        "ip": "",
+        "location": {
+            "country": "",
+            "region": "",
+            "timezone": ""
+        },
+        "domains": [],
+        "as": {
+            "asn": 0,
+            "name": "",
+            "route": "",
+            "domain": "",
+            "type": ""
+        },
+        "isp": ""
+    }
+    */
+}
 
 const ipSlice = createSlice(
     {
@@ -9,12 +30,16 @@ const ipSlice = createSlice(
         reducers: {
             setIp: (state, action) => {
                 const ip = action.payload
-                return {...state, ip: ip}
+                return {...state, ip}
+            },
+            setIpData: (state, action) => {
+                const data = action.payload
+                return {...state, data}
             }
         }
     }
 )
 
-export const { setIp } = ipSlice.actions
+export const { setIp, setIpData } = ipSlice.actions
 
 export default ipSlice

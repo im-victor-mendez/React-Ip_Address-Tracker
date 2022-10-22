@@ -1,16 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux";
-import { setIp } from '../stateManagement/ipSlice';
+import { geolocationApiCountry } from '../../utils/geolocationApi';
+import { setIp, setIpData } from '../stateManagement/ipSlice';
 
 function IpInput() {
     const [input, setInput] = useState('')
 
     const dispatch = useDispatch()
+    
 
     function handleSubmit(event) {
         event.preventDefault()
         dispatch(
             setIp(input)
+        )
+        
+        geolocationApiCountry(input)
+        .then(
+            data => {
+                dispatch(
+                    setIpData(data)
+                )
+            }
         )
     }
 
@@ -20,6 +31,7 @@ function IpInput() {
         <form onSubmit={handleSubmit}>
             {/* To add domain pattern */}
             <input
+            required
             type="text"
             minLength="7"
             maxLength="15"
