@@ -7,26 +7,27 @@ function IpData() {
     const ipData = useSelector(state => state.ip.data ? state.ip.data : {})
 
     const ip = ipData.ip
-    const location = ipData.location
+    const location = ipData.location ? ipData.location : {}
     const aS = ipData.as
     const isp = ipData.isp
-
-    console.log(ipData, ip, location, aS, isp)
     
     const view = [
+        ip ?
         <Data
         title={'Ip Address'}
-        value={ip ? ip : ''} />,
+        value={ip ? ip : ''} /> : null,
 
+        location && aS ?
         <Data
         title={'Location'}
-        value={location && aS ? `${location.region}, ${location.country} ${aS.asn}` : ''} />,
+        value={`${location.region}, ${location.country} ${aS.asn}`} /> : null,
 
+        location.timezone ?
         <Data
         title={'Timezone'}
-        value={location ? `UTC ${location.timezone}` : ''} />,
+        value={`UTC ${location.timezone}`} /> : null,
 
-        <Data title={'ISP'} value={isp ? isp : ''} />
+        isp ? <Data title={'ISP'} value={isp} /> : null
     ]
 
     return <Board view={view} />

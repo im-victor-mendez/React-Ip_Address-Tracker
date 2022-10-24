@@ -40,11 +40,19 @@ const ipSlice = createSlice(
             setIpData: (state, action) => {
                 const data = action.payload
                 return {...state, data}
+            },
+            setCurrentPosition: (state, action) => {
+                const data = action.payload
+                console.log(data)
+                return {
+                    ...state,
+                    data
+                }
             }
         }
     }
 )
 
-export const { setIp, setIpData } = ipSlice.actions
+export const { setIp, setIpData, setCurrentPosition } = ipSlice.actions
 
 export default ipSlice

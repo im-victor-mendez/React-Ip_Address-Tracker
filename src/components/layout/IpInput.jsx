@@ -27,8 +27,9 @@ function IpInput() {
             geolocationApiCountry(input)
             .then(
                 data => {
+                    console.log('ip Regex', data)
                     dispatch(
-                        setIpData(data.code)
+                        setIpData(data)
                     )
                 }
             )
@@ -38,6 +39,7 @@ function IpInput() {
             geolocationApiCountryDomain(input)
             .then(
                 data => {
+                    console.log('domain Regex', data)
                     dispatch(
                         setIpData(data)
                     )
