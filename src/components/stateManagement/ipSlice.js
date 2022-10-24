@@ -8,11 +8,16 @@ const initialState = {
         "location": {
             "country": "",
             "region": "",
-            "timezone": ""
+            "city": "",
+            "lat": ,
+            "lng": ,
+            "postalCode": "",
+            "timezone": "",
+            "geonameId": 
         },
-        "domains": [],
+        "domains": ["", ""],
         "as": {
-            "asn": 0,
+            "asn": ,
             "name": "",
             "route": "",
             "domain": "",
