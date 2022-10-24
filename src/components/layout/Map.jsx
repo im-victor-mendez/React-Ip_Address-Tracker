@@ -12,7 +12,7 @@ function RecenterAutomatically ({lat, lng}) {
 }
 
 function Map() {
-    const coordinates = useSelector(state => state.ip.data ? state.ip.data.location : {})
+    const coordinates = useSelector(state => state.ip.data && state.ip.data.code == undefined ? state.ip.data.location : {})
 
     const lat = coordinates.lat ? coordinates.lat : 0
     const lng = coordinates.lng ? coordinates.lng : 0

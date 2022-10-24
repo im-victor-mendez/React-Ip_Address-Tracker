@@ -15,6 +15,12 @@ export async function geolocationApiCountry(ipAddres) {
     return data
 }
 
+export async function geolocationApiCountryDomain(domain) {
+    const response = await fetch(`${api}country,city?${apiKey}&domain=${domain}`)
+    const data = await response.json()
+    return data
+}
+
 /*
 {
     "ip": "8.8.8.8",
