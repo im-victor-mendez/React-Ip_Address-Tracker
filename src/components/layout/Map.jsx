@@ -1,3 +1,4 @@
+import '../../style/components/layout/Map.css'
 import React, { useEffect } from 'react'
 import { useSelector } from "react-redux";
 import 'leaflet/dist/leaflet.css'
@@ -16,6 +17,19 @@ function Map() {
 
     const lat = coordinates.lat ? coordinates.lat : 0
     const lng = coordinates.lng ? coordinates.lng : 0
+
+    useEffect(() => {
+        const L = require('leaflet')
+        delete L.Icon.Default.prototype._getIconUrl
+
+        L.Icon.Default.mergeOptions(
+            {
+                iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+                iconUrl: require("leaflet/dist/images/marker-icon.png"),
+                shadowUrl: require("leaflet/dist/images/marker-shadow.png")
+            }
+        )
+    }, [])
 
     return lat && lng ? <MapContainer id='map' center={[lat, lng]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
