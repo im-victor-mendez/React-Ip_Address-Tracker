@@ -3,6 +3,10 @@
         width: 80%;
     }
 
+    #app #ip-input form {
+        justify-content: center;
+    }
+
     #app #ip-input form * {
         padding: 1rem;
     }
