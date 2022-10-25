@@ -5,7 +5,8 @@
     align-items: center;
     gap: 1rem;
 
-    background-color: rgb(73, 73, 240);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,173,208,1) 100%);
     color: white;
 
     padding: 2rem 0rem 10rem 0rem;
