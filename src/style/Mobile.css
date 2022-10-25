@@ -1,0 +1,25 @@
+@media (max-width: 800px) {
+    #app #ip-input form {
+        width: 80%;
+    }
+
+    #app #ip-input form * {
+        padding: 1rem;
+    }
+
+    #app #ip-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 60%;
+    }
+
+    #ip-data {
+        text-align: center;
+    }
+
+    #app #map {
+        height: 120vh;
+    }
+}
