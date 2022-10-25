@@ -1,3 +1,4 @@
+import '../../style/components/common/Board.css'
 import React from 'react'
 
 function Board({ view }) {
