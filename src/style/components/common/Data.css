@@ -1,0 +1,17 @@
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.data * {
+    margin: 0%;
+}
+
+.data #title {
+    color: var(--dark-gray);
+}
+
+.data #value {
+    color: var(--very-dark-gray);
+}

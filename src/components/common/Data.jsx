@@ -1,3 +1,4 @@
+import '../../style/components/common/Data.css'
 import React from 'react'
 
 function Data({ title, value }) {
