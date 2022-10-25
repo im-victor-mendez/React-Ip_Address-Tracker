@@ -43,11 +43,7 @@ const ipSlice = createSlice(
             },
             setCurrentPosition: (state, action) => {
                 const data = action.payload
-                console.log(data)
-                return {
-                    ...state,
-                    data
-                }
+                return {...state, data}
             }
         }
     }

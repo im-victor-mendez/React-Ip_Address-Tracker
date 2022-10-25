@@ -1,7 +1,7 @@
 import '../../style/components/layout/IpInput.css'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux";
-import { geolocationApiCountry, geolocationApiCountryDomain } from '../../utils/geolocationApi';
+import { geolocationApiCountryIp, geolocationApiCountryDomain } from '../../utils/geolocationApi';
 import { setIp, setIpData } from '../stateManagement/ipSlice';
 
 function IpInput() {
@@ -25,10 +25,9 @@ function IpInput() {
         )
 
         if(input.match(ipRegex) != null) {
-            geolocationApiCountry(input)
+            geolocationApiCountryIp(input)
             .then(
                 data => {
-                    console.log('ip Regex', data)
                     dispatch(
                         setIpData(data)
                     )
@@ -40,7 +39,6 @@ function IpInput() {
             geolocationApiCountryDomain(input)
             .then(
                 data => {
-                    console.log('domain Regex', data)
                     dispatch(
                         setIpData(data)
                     )

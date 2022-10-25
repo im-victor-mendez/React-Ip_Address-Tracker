@@ -14,7 +14,6 @@ function App() {
     ipApi()
     .then(
       data => {
-        console.log(data)
         dispatch(
           setCurrentPosition(
             {
@@ -29,8 +28,7 @@ function App() {
               },
               as: {
                 asn: data.asn.asn
-              },
-              //isp: 
+              }
             }
           )
         )

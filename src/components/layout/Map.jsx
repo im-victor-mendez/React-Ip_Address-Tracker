@@ -2,22 +2,28 @@ import '../../style/components/layout/Map.css'
 import React, { useEffect } from 'react'
 import { useSelector } from "react-redux";
 import 'leaflet/dist/leaflet.css'
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 
 function RecenterAutomatically ({lat, lng}) {
     const map = useMap()
+
     useEffect(() => {
       map.setView([lat, lng])
     }, [lat, lng])
+
     return null
 }
 
 function Map() {
-    const coordinates = useSelector(state => state.ip.data && state.ip.data.code == undefined ? state.ip.data.location : {})
+    const coordinates = useSelector(
+        state => state.ip.data && state.ip.data.code == undefined ?
+        state.ip.data.location : {}
+    )
 
     const lat = coordinates.lat ? coordinates.lat : 0
     const lng = coordinates.lng ? coordinates.lng : 0
 
+    /* Fix unproperly Marker render */
     useEffect(() => {
         const L = require('leaflet')
         delete L.Icon.Default.prototype._getIconUrl

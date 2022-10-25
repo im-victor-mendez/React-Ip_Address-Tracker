@@ -9,7 +9,7 @@ export async function geolocationAccountBalance() {
     return data
 }
 
-export async function geolocationApiCountry(ipAddres) {
+export async function geolocationApiCountryIp(ipAddres) {
     const response = await fetch(`${api}country,city?${apiKey}&ipAddress=${ipAddres}`)
     const data = await response.json()
     return data
@@ -21,7 +21,7 @@ export async function geolocationApiCountryDomain(domain) {
     return data
 }
 
-/*
+/* Response
 {
     "ip": "8.8.8.8",
     "location": {
