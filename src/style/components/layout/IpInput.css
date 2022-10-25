@@ -1,0 +1,38 @@
+#ip-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    background-color: rgb(73, 73, 240);
+    color: white;
+
+    padding: 1rem 0rem 3rem 0rem;
+}
+
+#ip-input * {
+    margin: 0%;
+}
+
+#ip-input form {
+    display: flex;
+}
+
+#ip-input form #input {
+    border: 0px;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+
+    padding: 0.5rem 1rem;
+    width: 18rem;
+}
+
+#ip-input form button {
+    border: 0px;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+
+    background-color: black;
+    color: white;
+
+    padding: 0rem 1rem;
+}

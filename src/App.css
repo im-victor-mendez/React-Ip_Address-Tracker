@@ -1,3 +1,10 @@
+@import url(style/fonts.css);
+@import url(style/colors.css);
+#app {
+    font-family: var(--font-family-rubik);
+}
+
+/* To move */
 #map {
     height: 700px;
     width: 700px;

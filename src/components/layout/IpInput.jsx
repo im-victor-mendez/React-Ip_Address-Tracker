@@ -1,3 +1,4 @@
+import '../../style/components/layout/IpInput.css'
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from "react-redux";
 import { geolocationApiCountry, geolocationApiCountryDomain } from '../../utils/geolocationApi';
