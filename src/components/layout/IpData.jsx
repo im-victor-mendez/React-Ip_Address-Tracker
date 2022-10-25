@@ -1,3 +1,4 @@
+import '../../style/components/layout/IpData.css'
 import React from 'react'
 import Board from '../common/Board'
 import { useSelector } from "react-redux";
@@ -20,7 +21,7 @@ function IpData() {
         location && aS ?
         <Data
         title={'Location'}
-        value={`${location.region}, ${location.country} ${aS.asn}`} /> : null,
+        value={`${location.region}, ${location.country}\n${aS.asn}`} /> : null,
 
         location.timezone ?
         <Data
@@ -30,7 +31,7 @@ function IpData() {
         isp ? <Data title={'ISP'} value={isp} /> : null
     ]
 
-    return <Board view={view} />
+    return <Board id='ip-data' view={view} />
 }
 
 /*

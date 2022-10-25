@@ -1,0 +1,11 @@
+#ip-data {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+
+    width: 70%;
+
+    position: absolute;
+    top: 10rem;
+    z-index: 1;
+}
