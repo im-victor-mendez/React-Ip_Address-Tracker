@@ -1,8 +1,8 @@
 import '../../style/components/layout/IpInput.css'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
 import { geolocationApiCountryIp, geolocationApiCountryDomain } from '../../utils/geolocationApi';
-import { setIp, setIpData } from '../stateManagement/ipSlice';
+import { setIp, setIpData } from '../../stateManagement/ipSlice';
 
 function IpInput() {
     const [input, setInput] = useState('')

@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import IpData from './components/layout/IpData';
 import IpInput from './components/layout/IpInput';
 import Map from './components/layout/Map';
-import { setCurrentPosition, setIpData } from './components/stateManagement/ipSlice';
+import { setCurrentPosition } from "./stateManagement/ipSlice";
 import { ipApi } from './utils/ipApi';
 
 function App() {
