@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/im-victor-mendez/React-Ip_Address-Tracker)
-- Live Site URL: [Netlify](https://wondrous-axolotl-2e548d.netlify.app/)
+- Live Site URL: [Netlify](https://ip-address-tracker-im-victor-mendez.netlify.app/)
 
 ## My process
 
